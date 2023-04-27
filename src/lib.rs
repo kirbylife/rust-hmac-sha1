@@ -167,7 +167,7 @@ impl HMAC {
         } else {
             k
         };
-        let mut padded = [0x36; 40];
+        let mut padded = [0x36; 64];
         for (p, &k) in padded.iter_mut().zip(k2.iter()) {
             *p ^= k;
         }
